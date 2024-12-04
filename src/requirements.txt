@@ -1,6 +1,0 @@
-langchain
-langchain-groq
-python-dotenv
-load_dotenv
-langserve[all]
-httpx==0.24.0
