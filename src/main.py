@@ -12,6 +12,8 @@ modelo = ChatGroq(model="llama3-8b-8192")
 parser = StrOutputParser()
 
 template_mensagem = ChatPromptTemplate.from_messages([
-    ("system", "Traduza o texto a seguir para {idioma}, e entenda que ele pode ser do tipo UTF-8"), 
+    ("system", "Traduza o texto a seguir para {idioma}, ele pode ser do tipo UTF-8 também, e caso não digite um idioma existente, retorne uma mensagem de 'idioma inválido'."), 
     ("user", "{texto}"),
 ])
+
+chain = template_mensagem | modelo | parser
