@@ -16,4 +16,4 @@ template_mensagem = ChatPromptTemplate.from_messages([
     ("user", "{texto}"),
 ])
 
-chain = template_mensagem | modelo | parser
+chain = template_mensagem | modelo | parser # Fará com que os códigos sejam rodados do input (Ínicio do código) até o output (Final do código).
